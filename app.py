@@ -12,7 +12,7 @@ class InferlessPythonModel:
     def infer(self, inputs):
         prompt = inputs["text"]
         pipeline_output = self.generator(prompt)
-        return pipeline_output[0]["summary_text"]
+        return {"generated_text":pipeline_output[0]["summary_text"]}
 
     def finalize(self):
         self.pipe = None
