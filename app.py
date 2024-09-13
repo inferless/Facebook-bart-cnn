@@ -1,6 +1,3 @@
-import json
-import numpy as np
-import torch
 from transformers import pipeline
 
 
@@ -9,12 +6,12 @@ class InferlessPythonModel:
         self.generator = pipeline(
             "summarization",
             model="facebook/bart-large-cnn",
-            device=0,
-            use_auth_token="False",
+            device="cuda",
         )
 
-    def infer(self, text):
-        pipeline_output = self.generator(text)
+    def infer(self, inputs):
+        prompt = inputs["text"]
+        pipeline_output = self.generator(prompt)
         return pipeline_output[0]["summary_text"]
 
     def finalize(self):
