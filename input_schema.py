@@ -1,15 +1,8 @@
 INPUT_SCHEMA = {
-    "articles": {
+    "text": {
         'datatype': 'STRING',
         'required': True,
-        'shape': [-1],
-        'example': [
-            "Diagnosis and Management of Central Diabetes Insipidus in Adults",
-            "Central diabetes insipidus (CDI) is a clinical syndrome which results from loss or impaired function of vasopressinergic neurons in the hypothalamus/posterior pituitary, resulting in impaired synthesis and/or secretion of arginine vasopressin (AVP). [...]",
-            "Adipsic diabetes insipidus",
-            "Adipsic diabetes insipidus (ADI) is a rare but devastating disorder of water balance with significant associated morbidity and mortality. Most patients develop the disease as a result of hypothalamic destruction from a variety of underlying etiologies. [...]",
-            "Nephrogenic diabetes insipidus: a comprehensive overview",
-            "Nephrogenic diabetes insipidus (NDI) is characterized by the inability to concentrate urine that results in polyuria and polydipsia, despite having normal or elevated plasma concentrations of arginine vasopressin (AVP). [...]"
-      ]
+        'shape': [1],
+        'example': ["Natural language processing (NLP) refers to the branch of computer science—and more specifically, the branch of artificial intelligence or AI—concerned with giving computers the ability to understand text and spoken words in much the same way human beings can. NLP combines computational linguistics—rule-based modeling of human language—with statistical, machine learning, and deep learning models. Together, these technologies enable computers to process human language in the form of text or voice data and to ‘understand’ its full meaning, complete with the speaker or writer’s intent and sentiment."]
     }
 }
