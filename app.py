@@ -1,8 +1,11 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 from transformers import pipeline
-
 
 class InferlessPythonModel:
     def initialize(self):
+        snapshot_download(repo_id="facebook/bart-large-cnn",allow_patterns=["*.safetensors"])
         self.generator = pipeline(
             "summarization",
             model="facebook/bart-large-cnn",
